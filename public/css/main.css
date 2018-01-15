@@ -1,0 +1,55 @@
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    background-image:
+         url(https://image.ibb.co/k0aqx6/snow.png), 
+         url(https://image.ibb.co/eCahc6/snow1.png), 
+         url(https://image.ibb.co/bOboH6/snow2.png);
+    width: 100%;
+    height:100%;
+    position: absoulute;
+    top: 0;
+    left: 0;
+    z-index:1;
+    animation: snow 20s linear infinite;
+    background-color: black;
+}
+
+@keyframes snow {
+    from {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    to {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+.container-join-chat {
+    width: 777px;
+    margin: 0 auto;
+}
+
+.messages {
+    border: 1px solid darkgrey;
+    border-bottom: none;
+    width: 781px;
+    height: 240px;
+}
+
+#message {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.chat {
+    display: none;
+}
+
+.chat-info {
+    color: aquamarine;
+    margin: 2em;
+}
+
+.footer-color {
+    color: white;
+}
+
+#chat-messages li {
+    padding: 12px;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node.js + Socket.io + Redis Chat | ScaleGrid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.2/css/bulma.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.6.0/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<div id="chat-app">
+        <div class="has-text-centered">
+          <section class="hero is-success">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">Socket Chat</h1>
+                <h2>Chat Application with Node.js + Socket.io + Redis Chat | ScaleGrid</h2>
+              </div>
+            </div>
+          </section>
+          <section class="section join-chat">
+                <div class="container-join-chat">
+                    <div class="join-chat">
+                        <div class="field has-addons">
+                            <p class="control is-expanded">
+                                <input type="text" id="username" class="input" placeholder="Input Username for join chat" name="username"/>
+                            </p>
+                            <p class="control">
+                                <input type="button" id="join-chat" class="button is-success" value="Join Chat"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-info"></div>
+                </div>
+          </section>
+          <section class="section chat-container chat">
+            <div class="container">
+              <div class="columns">
+                <div class="box column is-8 is-offset-2">
+                  <h2 class="title">Chatbox</h2>
+                  <div class="chat-messages has-text-left">
+                    <ul id="chat-messages"></ul>
+                  </div>
+                  <form>
+                    <div class="field has-addons chat">
+                      <p class="control">
+                        <input class="input" type="text" value="Aquarius" id="name">
+                      </p>
+                      <p class="control is-expanded">
+                        <input class="input" type="text" placeholder="Try to say something" id="message" name="message">
+                      </p>
+                      <p class="control">
+                        <input type="button" id="send-message" data-username="" class="button is-primary" value="Post">
+                      </p>
+                    </div>
+                    <div class="field has-addons">
+                        <p class="control">
+                            <input type="button" id="leave-chat" data-username="" class="button is-danger" value="Leave Chat">
+                        </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <div class="container">
+              <div class="content">
+                <p class="footer-color">Powered by<a href="https://vue-firebase-host.firebaseapp.com/"> Ball</a></p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+</body>
+</html>
