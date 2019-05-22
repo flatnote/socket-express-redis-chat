@@ -6,7 +6,6 @@ var io = require("socket.io")(http);
 const cors = require("cors");
 
 var fs = require("fs");
-var creds = "";
 
 var redis = require("redis");
 var client = "";
@@ -15,10 +14,9 @@ var client = "";
 fs.readFile("creds.json", "utf-8", function(err, data) {
     if (err) throw err;
     creds = JSON.parse(data);
-    client = redis.createClient(
-        "redis://rediscloud:i0EOMBWIFLSCRJpCeYU2QaNtIg1kRYi6@redis-15814.c114.us-east-1-4.ec2.cloud.redislabs.com:15814",
-        { no_ready_check: true }
-    );
+    client = redis.createClient(process.env.REDISCLOUD_URL, {
+        no_ready_check: true
+    });
 
     // Redis Client Ready
     client.once("ready", function() {
